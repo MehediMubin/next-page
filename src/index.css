@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    @apply text-blue-700 hover:text-blue-400;
+}
+
+.default {
+    @apply hover:text-blue-400;
+}
