@@ -1,6 +1,8 @@
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+import Lottie from "lottie-react";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import reader from "../assets/reader.json";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -10,8 +12,8 @@ const Home = () => {
     };
 
     return (
-        <div className="flex justify-between">
-            <div className="my-container">
+        <div className="flex items-center justify-between my-container gap-20">
+            <div className="w-2/4 text-justify">
                 <p className="bg-yellow-400 inline px-3 py-1 rounded-full text-xs font-semibold text-gray-700">
                     ON SALE!
                 </p>
@@ -26,7 +28,10 @@ const Home = () => {
                     than the man who can’t.
                 </p>
                 <div className="flex items-center gap-3">
-                    <button onClick={handleNavigate} className="bg-blue-400 hover:bg-blue-700 text-white px-6 py-3 rounded flex justify-center items-center font-semibold mt-4 gap-3">
+                    <button
+                        onClick={handleNavigate}
+                        className="bg-blue-400 hover:bg-blue-700 text-white px-6 py-3 rounded flex justify-center items-center font-semibold mt-4 gap-3"
+                    >
                         Visit Store
                         <ShoppingCartIcon className="h-5 w-5 text-white" />
                     </button>
@@ -38,7 +43,9 @@ const Home = () => {
                     </Link>
                 </div>
             </div>
-            <div></div>
+            <div className="w-2/4">
+                <Lottie animationData={reader} loop={true} />
+            </div>
         </div>
     );
 };
